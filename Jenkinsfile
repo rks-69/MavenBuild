@@ -7,7 +7,12 @@ node(){
 	}
 	stage('Build Automation'){
 		steps {
-			sh 'pwsh --version'
+			bat '''
+				@echo off
+    				ls "-lart"
+				mvn "clean" "install"
+				ls "-lart" "target"
+   			'''
 		}
 	}
 	
