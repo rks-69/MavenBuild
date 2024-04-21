@@ -25,12 +25,12 @@ pipeline {
                                 bat "mvn test"
 							}
 						}
-						stage('Stage 4 -Create build') {
-							steps {
-								//cmd to create the build of project							
-                                bat "mvn testpackage"
-							}
-						}
+						// stage('Stage 4 -Create build') {
+						// 	steps {
+						// 		//cmd to create the build of project							
+      //                           bat "mvn testpackage"
+						// 	}
+						// }
 	
 					}
 					post{
