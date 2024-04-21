@@ -6,12 +6,10 @@ node(){
 		checkout changelog: false, poll: false, scm: scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHubCreds', url: 'https://github.com/rks-69/MavenBuild']])
 	}
 	stage('Build Automation'){
-@echo off
+		steps {
+			sh 'pwsh --version'
+		}
 
-ls "-lart"
-mvn "clean" "install"
-ls "-lart" "target"
-	}
 	
 	stage('Code Scan'){
 		withSonarQubeEnv(credentialsId: 'SonarQubeCreds') {
