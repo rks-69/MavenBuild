@@ -9,9 +9,7 @@ node(){
 		steps {
 			bat '''
 				@echo off
-    				ls "-lart"
 				mvn "clean" "install"
-				ls "-lart" "target"
    			'''
 		}
 	}
