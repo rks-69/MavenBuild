@@ -9,7 +9,7 @@ pipeline {
 						stage('Stage 1 - Checkout Code') {
 							steps {
 								//Get the code form GITHUB							
-                                git 'https://github.com/ajautomation/PassParametersRunTimeViaMVN'
+                                git 'https://github.com/rks-69/Maven-Sample'
 							}
 						}
 						stage('Stage 2 - Compile Code') {
